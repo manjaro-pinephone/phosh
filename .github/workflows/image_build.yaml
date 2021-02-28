@@ -109,7 +109,7 @@ jobs:
           BRANCH: ${{ matrix.BRANCH }}
           VERSION: beta6
         run: |
-          sudo mv -v /home/runner/work/phosh-dev/phosh-dev/arm-profiles /usr/share/manjaro-arm-tools/profiles
+          sudo mv -v /home/runner/work/$EDITION/$EDITION/arm-profiles /usr/share/manjaro-arm-tools/profiles
           sudo buildarmimg -d pinephone -e $EDITION -v $VERSION -b $BRANCH
           
           FILE_PATH=$(find /var/cache/manjaro-arm-tools/img -type f -name "*.img.xz" -exec stat -c '%Y %n' {} \; | sort -nr | awk 'NR==1 {print $2}')
