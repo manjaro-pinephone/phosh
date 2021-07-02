@@ -44,7 +44,6 @@ jobs:
         uses: manjaro-arm/rootfs@master
         with:
           arm-profiles-repo: https://github.com/manjaro-pinephone/arm-profiles
-          overlay-repo: kde-unstable
           device: ${{ matrix.device }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
