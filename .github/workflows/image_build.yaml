@@ -18,8 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: beta24
-          release_name: Beta 24
+          tag_name: beta25
+          release_name: Beta 25
           draft: false
           prerelease: false
     outputs:
@@ -47,7 +47,7 @@ jobs:
           device: ${{ matrix.device }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
-          version: beta24
+          version: beta25
           #CI_PUB_KEY: "${{ secrets.CI_PUB_KEY }}"
           #CI_GPG_SECRET: "${{ secrets.CI_GPG_SECRET }}"
           #CI_GPG_PASSPHRASE: "${{ secrets.CI_GPG_PASSPHRASE }}"
