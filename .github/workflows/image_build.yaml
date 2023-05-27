@@ -18,8 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: beta32-rc1
-          release_name: Beta 32 RC1
+          tag_name: beta32
+          release_name: Beta 32
           draft: false
           prerelease: true
     outputs:
@@ -33,7 +33,7 @@ jobs:
       matrix:
         DEVICE: [pinephone,pinephonepro]
         EDITION: [phosh]
-        BRANCH: [testing]
+        BRANCH: [stable]
     steps:
       - 
         uses: styfle/cancel-workflow-action@0.11.0
@@ -47,7 +47,7 @@ jobs:
           device: ${{ matrix.device }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
-          version: beta32-rc1
+          version: beta32
           #CI_PUB_KEY: "${{ secrets.CI_PUB_KEY }}"
           #CI_GPG_SECRET: "${{ secrets.CI_GPG_SECRET }}"
           #CI_GPG_PASSPHRASE: "${{ secrets.CI_GPG_PASSPHRASE }}"
