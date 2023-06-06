@@ -18,8 +18,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: beta32
-          release_name: Beta 32
+          tag_name: beta33
+          release_name: Beta 33
           draft: false
           prerelease: true
     outputs:
@@ -47,7 +47,7 @@ jobs:
           device: ${{ matrix.device }}
           edition: ${{ matrix.edition }}
           branch: ${{ matrix.branch }}
-          version: beta32
+          version: beta33
           #CI_PUB_KEY: "${{ secrets.CI_PUB_KEY }}"
           #CI_GPG_SECRET: "${{ secrets.CI_GPG_SECRET }}"
           #CI_GPG_PASSPHRASE: "${{ secrets.CI_GPG_PASSPHRASE }}"
